@@ -1,0 +1,830 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* ========================================
+   PAGE
+======================================== */
+
+.leaderboard-page {
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+/* ========================================
+   SIDEBAR
+======================================== */
+
+.leaderboard-sidebar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 260px;
+  height: 100vh;
+
+  background: #0f172a;
+  color: #ffffff;
+
+  padding: 28px 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  z-index: 100;
+}
+
+.lb-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.lb-brand-mark {
+  width: 44px;
+  height: 44px;
+
+  border-radius: 10px;
+
+  background: #2563eb;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.lb-brand h2 {
+  margin: 0;
+
+  font-size: 17px;
+  font-weight: 650;
+}
+
+.lb-brand p {
+  margin: 4px 0 0;
+
+  color: #94a3b8;
+
+  font-size: 11px;
+}
+
+.lb-divider {
+  height: 1px;
+
+  background: #1e293b;
+
+  margin: 25px 0;
+}
+
+.lb-menu-label {
+  margin: 0 10px 12px;
+
+  color: #64748b;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.lb-menu {
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.lb-menu-item {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 12px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: transparent;
+  color: #cbd5e1;
+
+  text-align: left;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.lb-menu-item:hover {
+  background: #1e293b;
+  color: #ffffff;
+}
+
+.lb-menu-item.active {
+  background: #1e3a8a;
+  color: #ffffff;
+}
+
+.lb-menu-code {
+  width: 28px;
+  height: 28px;
+
+  border-radius: 6px;
+
+  background: rgba(
+    255,
+    255,
+    255,
+    0.08
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+}
+
+/* ========================================
+   SIDEBAR USER
+======================================== */
+
+.lb-sidebar-bottom {
+  margin-top: auto;
+}
+
+.lb-user {
+  padding: 16px 10px;
+
+  border-top: 1px solid #1e293b;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.lb-user-avatar {
+  width: 38px;
+  height: 38px;
+
+  border-radius: 50%;
+
+  background: #1e3a8a;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.lb-user-details {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.lb-user-details strong {
+  font-size: 13px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lb-user-details span {
+  margin-top: 3px;
+
+  color: #94a3b8;
+
+  font-size: 11px;
+}
+
+.lb-logout {
+  width: 100%;
+
+  padding: 11px;
+
+  border: 1px solid #334155;
+  border-radius: 8px;
+
+  background: transparent;
+  color: #cbd5e1;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.lb-logout:hover {
+  background: #1e293b;
+  color: #ffffff;
+}
+
+/* ========================================
+   MAIN
+======================================== */
+
+.leaderboard-main {
+  margin-left: 260px;
+
+  min-height: 100vh;
+
+  padding: 35px 45px 60px;
+}
+
+/* ========================================
+   TOPBAR
+======================================== */
+
+.lb-topbar {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 30px;
+
+  margin-bottom: 30px;
+}
+
+.lb-page-label,
+.lb-section-label {
+  margin: 0 0 7px;
+
+  color: #2563eb;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1.7px;
+}
+
+.lb-topbar h1 {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: 30px;
+  font-weight: 650;
+}
+
+.lb-page-description {
+  margin: 8px 0 0;
+
+  color: #64748b;
+
+  font-size: 13px;
+}
+
+.lb-primary-button {
+  padding: 12px 20px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.lb-primary-button:hover {
+  background: #1d4ed8;
+}
+
+/* ========================================
+   SUMMARY
+======================================== */
+
+.lb-summary-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 18px;
+
+  margin-bottom: 40px;
+}
+
+.lb-summary-card {
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 12px;
+
+  padding: 24px;
+
+  box-shadow:
+    0 2px 6px
+    rgba(15, 23, 42, 0.03);
+}
+
+.lb-summary-top {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  color: #64748b;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.lb-summary-code {
+  width: 30px;
+  height: 30px;
+
+  border-radius: 7px;
+
+  background: #eff6ff;
+  color: #2563eb;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.lb-summary-card h2 {
+  margin: 18px 0 6px;
+
+  color: #0f172a;
+
+  font-size: 27px;
+}
+
+.lb-summary-card p {
+  margin: 0;
+
+  color: #94a3b8;
+
+  font-size: 12px;
+}
+
+/* ========================================
+   RANKING SECTION
+======================================== */
+
+.lb-ranking-section {
+  margin-top: 10px;
+}
+
+.lb-section-header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-end;
+
+  margin-bottom: 18px;
+}
+
+.lb-section-header h2 {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: 21px;
+  font-weight: 650;
+}
+
+.lb-refresh-button {
+  border: none;
+
+  background: transparent;
+  color: #2563eb;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+/* ========================================
+   TABLE
+======================================== */
+
+.lb-table-card {
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 2px 6px
+    rgba(15, 23, 42, 0.03);
+}
+
+.lb-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+.lb-table {
+  width: 100%;
+
+  min-width: 760px;
+
+  border-collapse: collapse;
+}
+
+.lb-table thead {
+  background: #f8fafc;
+}
+
+.lb-table th {
+  padding: 16px 20px;
+
+  border-bottom: 1px solid #e2e8f0;
+
+  color: #64748b;
+
+  text-align: left;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.7px;
+
+  text-transform: uppercase;
+}
+
+.lb-table td {
+  padding: 18px 20px;
+
+  border-bottom: 1px solid #f1f5f9;
+
+  color: #334155;
+
+  font-size: 13px;
+}
+
+.lb-table tbody tr {
+  transition: 0.2s;
+}
+
+.lb-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.lb-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ========================================
+   RANK
+======================================== */
+
+.lb-rank {
+  width: 36px;
+  height: 36px;
+
+  border-radius: 8px;
+
+  background: #f1f5f9;
+  color: #475569;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 700;
+
+  font-size: 12px;
+}
+
+.lb-rank.rank-first {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+/* ========================================
+   CANDIDATE
+======================================== */
+
+.lb-candidate {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.lb-candidate-avatar {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #eff6ff;
+  color: #1d4ed8;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.lb-candidate-info {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.lb-candidate-info strong {
+  color: #0f172a;
+
+  font-size: 13px;
+}
+
+.lb-candidate-info span {
+  color: #94a3b8;
+
+  font-size: 11px;
+}
+
+/* ========================================
+   SUBJECT
+======================================== */
+
+.lb-subject {
+  color: #475569;
+
+  font-weight: 500;
+}
+
+/* ========================================
+   SCORE
+======================================== */
+
+.lb-score {
+  color: #0f172a;
+
+  font-size: 16px;
+}
+
+/* ========================================
+   STATUS
+======================================== */
+
+.lb-status {
+  display: inline-flex;
+
+  padding: 6px 10px;
+
+  border-radius: 20px;
+
+  background: #f1f5f9;
+  color: #475569;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.lb-status.top {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+/* ========================================
+   TABLE FOOTER
+======================================== */
+
+.lb-table-footer {
+  padding: 16px 20px;
+
+  border-top: 1px solid #e2e8f0;
+
+  background: #f8fafc;
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+
+  color: #64748b;
+
+  font-size: 11px;
+}
+
+/* ========================================
+   LOADING / EMPTY / ERROR
+======================================== */
+
+.lb-state-card {
+  min-height: 300px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 12px;
+
+  padding: 50px 30px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.lb-state-card h3 {
+  margin: 18px 0 8px;
+
+  color: #0f172a;
+
+  font-size: 20px;
+}
+
+.lb-state-card p {
+  max-width: 500px;
+
+  margin: 0 0 22px;
+
+  color: #64748b;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+.lb-state-code {
+  width: 55px;
+  height: 55px;
+
+  border-radius: 12px;
+
+  background: #eff6ff;
+  color: #2563eb;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.lb-error-card {
+  border-color: #fecaca;
+
+  background: #fffafa;
+}
+
+.lb-error-card .lb-state-code {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.lb-retry-button {
+  padding: 11px 20px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #0f172a;
+  color: #ffffff;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+/* ========================================
+   LOADER
+======================================== */
+
+.lb-loader {
+  width: 36px;
+  height: 36px;
+
+  border: 3px solid #dbeafe;
+
+  border-top-color: #2563eb;
+
+  border-radius: 50%;
+
+  animation: lbSpin 0.8s linear infinite;
+}
+
+@keyframes lbSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 1000px) {
+  .lb-summary-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 850px) {
+  .leaderboard-sidebar {
+    position: relative;
+
+    width: 100%;
+    height: auto;
+  }
+
+  .leaderboard-main {
+    margin-left: 0;
+
+    padding: 25px 20px 50px;
+  }
+
+  .lb-sidebar-bottom {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .lb-topbar {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .lb-section-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+  .lb-table-footer {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .lb-primary-button {
+    width: 100%;
+  }
+}

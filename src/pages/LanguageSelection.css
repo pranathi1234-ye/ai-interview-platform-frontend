@@ -1,0 +1,281 @@
+/* =====================================================
+   LANGUAGE SELECTION PAGE
+===================================================== */
+
+.language-page {
+  min-height: 100vh;
+  background: #f7f9fc;
+  padding: 40px 55px;
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.language-header {
+  max-width: 1200px;
+  margin: 0 auto 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.language-label {
+  margin: 0 0 10px;
+
+  color: #2457d6;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.language-header h1 {
+  margin: 0;
+
+  color: #101828;
+
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.language-subtitle {
+  margin-top: 10px;
+
+  color: #667085;
+
+  font-size: 15px;
+}
+
+/* =====================================================
+   BACK BUTTON
+===================================================== */
+
+.back-button {
+  padding: 12px 20px;
+
+  background: white;
+
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+
+  color: #344054;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.back-button:hover {
+  border-color: #2457d6;
+  color: #2457d6;
+}
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.language-search-container {
+  max-width: 1200px;
+  margin: 0 auto 15px;
+}
+
+.language-search {
+  width: 100%;
+
+  padding: 16px 18px;
+
+  box-sizing: border-box;
+
+  background: white;
+
+  border: 1px solid #d0d5dd;
+  border-radius: 10px;
+
+  outline: none;
+
+  color: #101828;
+
+  font-size: 15px;
+
+  transition: 0.2s ease;
+}
+
+.language-search:focus {
+  border-color: #2457d6;
+
+  box-shadow:
+    0 0 0 3px rgba(36, 87, 214, 0.1);
+}
+
+/* =====================================================
+   COUNT
+===================================================== */
+
+.language-count {
+  max-width: 1200px;
+  margin: 0 auto 15px;
+
+  color: #667085;
+
+  font-size: 13px;
+}
+
+/* =====================================================
+   LANGUAGE GRID
+===================================================== */
+
+.language-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+/* =====================================================
+   LANGUAGE CARD
+===================================================== */
+
+.language-card {
+  min-height: 90px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: white;
+
+  border: 1px solid #dfe4ec;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+
+  text-align: center;
+}
+
+.language-card:hover {
+  transform: translateY(-3px);
+
+  border-color: #2457d6;
+
+  box-shadow:
+    0 8px 24px rgba(16, 24, 40, 0.08);
+}
+
+/* =====================================================
+   LANGUAGE NAME
+===================================================== */
+
+.language-name {
+  color: #101828;
+
+  font-size: 19px;
+
+  font-weight: 600;
+}
+
+/* =====================================================
+   NO RESULTS
+===================================================== */
+
+.no-language {
+  max-width: 1200px;
+
+  margin: 50px auto;
+
+  padding: 50px;
+
+  background: white;
+
+  border: 1px solid #dfe4ec;
+
+  border-radius: 12px;
+
+  text-align: center;
+}
+
+.no-language h2 {
+  margin: 0 0 10px;
+
+  color: #101828;
+}
+
+.no-language p {
+  color: #667085;
+}
+
+.no-language button {
+  margin-top: 15px;
+
+  padding: 11px 20px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #2457d6;
+
+  color: white;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1000px) {
+  .language-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .language-page {
+    padding: 25px 20px;
+  }
+
+  .language-header {
+    flex-direction: column;
+  }
+
+  .language-header h1 {
+    font-size: 28px;
+  }
+
+  .language-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 450px) {
+  .language-grid {
+    grid-template-columns: 1fr;
+  }
+}
