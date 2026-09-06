@@ -102,7 +102,7 @@ function ResumeAnalyzer() {
 
       const extractResponse =
         await axios.post(
-          "http://localhost:8080/api/resume-analyzer/extract",
+          "http://https://ai-interview-platform-backend-production.up.railway.app/api/resume-analyzer/extract",
           formData
         );
 
@@ -228,7 +228,7 @@ function ResumeAnalyzer() {
 
       const aiResponse =
         await axios.post(
-          "http://localhost:8080/api/resume-analyzer/analyze",
+          "http://https://ai-interview-platform-backend-production.up.railway.app/api/resume-analyzer/analyze",
           {
             resumeText:
               extractedText,

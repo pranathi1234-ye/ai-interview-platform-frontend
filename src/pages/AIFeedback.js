@@ -79,7 +79,7 @@ function AIFeedback() {
       setFeedback([]);
 
       const response = await axios.post(
-        "http://localhost:8080/api/feedback/evaluate",
+        "http://https://ai-interview-platform-backend-production.up.railway.app/api/feedback/evaluate",
         {
           answers,
         }

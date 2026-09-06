@@ -108,7 +108,7 @@ function CodingPractice() {
     try {
 
       const response = await axios.post(
-        "http://localhost:8080/api/coding/run",
+        "http://https://ai-interview-platform-backend-production.up.railway.app/api/coding/run",
         {
           questionId: selectedQuestion.id,
           code: code

@@ -36,7 +36,7 @@ function Login() {
       setLoading(true);
 
       const response = await axios.post(
-        "http://localhost:8080/api/login",
+        "https://ai-interview-platform-backend-production.up.railway.app/api/login",
         {
           email: cleanEmail,
           password: password,
@@ -74,6 +74,7 @@ function Login() {
       );
 
       navigate("/dashboard");
+
     } catch (error) {
       console.error("Login error:", error);
 
@@ -93,6 +94,7 @@ function Login() {
           "Unable to sign in. Please try again."
         );
       }
+
     } finally {
       setLoading(false);
     }
@@ -102,8 +104,8 @@ function Login() {
     <div className="login-page">
 
       {/* LEFT PANEL */}
-
       <section className="login-brand-panel">
+
         <div className="login-brand">
 
           <div className="login-logo">
@@ -138,6 +140,7 @@ function Login() {
           <div className="login-features">
 
             <div className="login-feature">
+
               <div className="feature-number">
                 01
               </div>
@@ -152,9 +155,11 @@ function Login() {
                   coding interview questions.
                 </span>
               </div>
+
             </div>
 
             <div className="login-feature">
+
               <div className="feature-number">
                 02
               </div>
@@ -169,9 +174,11 @@ function Login() {
                   receive intelligent feedback.
                 </span>
               </div>
+
             </div>
 
             <div className="login-feature">
+
               <div className="feature-number">
                 03
               </div>
@@ -186,21 +193,24 @@ function Login() {
                   preparation progress.
                 </span>
               </div>
+
             </div>
 
           </div>
+
         </div>
 
         <p className="login-brand-footer">
           AI Interview Preparation Platform
         </p>
+
       </section>
 
       {/* RIGHT PANEL */}
-
       <section className="login-form-panel">
 
         <div className="mobile-brand">
+
           <div className="login-logo">
             AI
           </div>
@@ -209,6 +219,7 @@ function Login() {
             <strong>AI Interview</strong>
             <span>Preparation Platform</span>
           </div>
+
         </div>
 
         <div className="login-form-container">
@@ -219,7 +230,9 @@ function Login() {
               CANDIDATE PORTAL
             </p>
 
-            <h2>Welcome back</h2>
+            <h2>
+              Welcome back
+            </h2>
 
             <p>
               Sign in to continue your interview
@@ -232,11 +245,15 @@ function Login() {
 
             {error && (
               <div className="login-error">
+
                 <div className="error-indicator">
                   !
                 </div>
 
-                <span>{error}</span>
+                <span>
+                  {error}
+                </span>
+
               </div>
             )}
 
@@ -252,11 +269,13 @@ function Login() {
                 placeholder="Enter your email address"
                 value={email}
                 onChange={(event) => {
+
                   setEmail(event.target.value);
 
                   if (error) {
                     setError("");
                   }
+
                 }}
                 autoComplete="email"
                 disabled={loading}
@@ -267,9 +286,11 @@ function Login() {
             <div className="form-group">
 
               <div className="password-label-row">
+
                 <label htmlFor="password">
                   Password
                 </label>
+
               </div>
 
               <div className="password-field">
@@ -284,6 +305,7 @@ function Login() {
                   placeholder="Enter your password"
                   value={password}
                   onChange={(event) => {
+
                     setPassword(
                       event.target.value
                     );
@@ -291,6 +313,7 @@ function Login() {
                     if (error) {
                       setError("");
                     }
+
                   }}
                   autoComplete="current-password"
                   disabled={loading}
@@ -328,7 +351,9 @@ function Login() {
           </form>
 
           <div className="login-divider">
-            <span>New to the platform?</span>
+            <span>
+              New to the platform?
+            </span>
           </div>
 
           <button

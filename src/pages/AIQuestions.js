@@ -51,7 +51,7 @@ function AIQuestions() {
       setQuestions([]);
 
       const response = await axios.post(
-        "http://localhost:8080/api/interview/generate-questions",
+        "http://https://ai-interview-platform-backend-production.up.railway.app/api/interview/generate-questions",
         {
           resumeText: resumeText,
         }

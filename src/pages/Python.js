@@ -120,7 +120,7 @@ function Python() {
 
     try {
       const response = await fetch(
-        "http://localhost:8080/api/interview/evaluate-answer",
+        "http://https://ai-interview-platform-backend-production.up.railway.app/api/interview/evaluate-answer",
         {
           method: "POST",
 

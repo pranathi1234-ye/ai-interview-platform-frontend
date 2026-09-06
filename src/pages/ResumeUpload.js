@@ -132,7 +132,7 @@ function ResumeUpload() {
       setMessage("");
 
       const response = await axios.post(
-        "http://localhost:8080/api/resume/upload",
+        "http://https://ai-interview-platform-backend-production.up.railway.app/api/resume/upload",
         formData,
         {
           headers: {

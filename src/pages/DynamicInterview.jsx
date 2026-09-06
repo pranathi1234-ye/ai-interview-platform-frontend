@@ -179,7 +179,7 @@ function DynamicInterview() {
 
         const response =
           await fetch(
-            "http://localhost:8080/api/interview/generate-questions",
+            "http://https://ai-interview-platform-backend-production.up.railway.app/api/interview/generate-questions",
             {
               method: "POST",
 
@@ -526,7 +526,7 @@ function DynamicInterview() {
 
         const response =
           await fetch(
-            "http://localhost:8080/api/feedback/evaluate",
+            "http://https://ai-interview-platform-backend-production.up.railway.app/api/feedback/evaluate",
             {
               method: "POST",
 
@@ -705,7 +705,7 @@ function DynamicInterview() {
 
       const response =
         await fetch(
-          "http://localhost:8080/api/scores",
+          "http://https://ai-interview-platform-backend-production.up.railway.app/api/scores",
           {
             method: "POST",
 
