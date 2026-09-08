@@ -48,7 +48,7 @@ function Analytics() {
 
     try {
       const response = await axios.get(
-        `http://https://ai-interview-platform-backend-production.up.railway.app/api/scores/${encodeURIComponent(
+        `https://ai-interview-platform-backend-production.up.railway.app/api/scores/${encodeURIComponent(
           username
         )}`
       );

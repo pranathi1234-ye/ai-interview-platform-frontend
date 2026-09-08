@@ -54,7 +54,7 @@ function Leaderboard() {
 
       try {
         const response = await axios.get(
-          "http://https://ai-interview-platform-backend-production.up.railway.app/api/scores"
+          "https://ai-interview-platform-backend-production.up.railway.app/api/scores"
         );
 
         if (Array.isArray(response.data)) {

@@ -127,7 +127,7 @@ function ReactPage() {
 
     try {
       const response = await fetch(
-        "http://https://ai-interview-platform-backend-production.up.railway.app/api/interview/evaluate-answer",
+        "https://ai-interview-platform-backend-production.up.railway.app/api/interview/evaluate-answer",
         {
           method: "POST",
 

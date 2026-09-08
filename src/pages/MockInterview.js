@@ -278,7 +278,7 @@ function MockInterview() {
 
         const response =
           await axios.post(
-            "http://https://ai-interview-platform-backend-production.up.railway.app/api/interview/evaluate-answer",
+            "https://ai-interview-platform-backend-production.up.railway.app/api/interview/evaluate-answer",
             {
               question:
                 questions[
@@ -658,7 +658,7 @@ function MockInterview() {
       // =====================================================
 
       axios.post(
-        "http://https://ai-interview-platform-backend-production.up.railway.app/api/scores",
+        "https://ai-interview-platform-backend-production.up.railway.app/api/scores",
         {
           username:
             username,
