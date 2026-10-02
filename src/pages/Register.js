@@ -61,7 +61,7 @@ function Register() {
       setLoading(true);
 
       const response = await axios.post(
-        "https://ai-interview-platform-backend-production.up.railway.app/api/register",
+        "https://ai-interview-platform-backend-esdg.onrender.com/api/register",
         {
           name: name.trim(),
           email: email.trim(),
