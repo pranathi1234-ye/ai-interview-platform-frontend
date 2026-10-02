@@ -292,7 +292,7 @@ function ResumeQuestions() {
 
         const response =
           await axios.post(
-            "https://ai-interview-platform-backend-production.up.railway.app/api/resume-analyzer/generate-questions",
+            "https://ai-interview-platform-backend-esdg.onrender.com/api/resume-analyzer/generate-questions",
             {
               resumeText:
                 latestResume
