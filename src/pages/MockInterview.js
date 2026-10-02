@@ -658,7 +658,7 @@ function MockInterview() {
       // =====================================================
 
       axios.post(
-        "https://ai-interview-platform-backend-production.up.railway.app/api/scores",
+        "https://ai-interview-platform-backend-esdg.onrender.com/api/scores",
         {
           username:
             username,
