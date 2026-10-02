@@ -91,7 +91,7 @@ function HRChatbot() {
 
       const response =
         await axios.post(
-          "https://ai-interview-platform-backend-production.up.railway.app/api/hr/chat",
+          "https://ai-interview-platform-backend-esdg.onrender.com/api/hr/chat",
           {
             question:
               finalQuestion.trim(),
