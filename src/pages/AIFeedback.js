@@ -79,7 +79,7 @@ function AIFeedback() {
       setFeedback([]);
 
       const response = await axios.post(
-        "https://ai-interview-platform-backend-production.up.https://ai-interview-platform-backend-esdg.onrender.com/api/feedback/evaluate",
+        "https://ai-interview-platform-backend-esdg.onrender.com/api/feedback/evaluate",
         {
           answers,
         }
