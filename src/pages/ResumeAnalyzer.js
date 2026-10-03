@@ -102,7 +102,7 @@ function ResumeAnalyzer() {
 
       const extractResponse =
         await axios.post(
-          "https://ai-interview-platform-backend-production.up.https://ai-interview-platform-backend-esdg.onrender.com/api/resume-analyzer/extract",
+          "https://ai-interview-platform-backend-esdg.onrender.com/api/resume-analyzer/extract",
           formData
         );
 
@@ -228,7 +228,7 @@ function ResumeAnalyzer() {
 
       const aiResponse =
         await axios.post(
-          "https://ai-interview-platform-backend-production.up.https://ai-interview-platform-backend-esdg.onrender.com/api/resume-analyzer/analyze",
+          "https://ai-interview-platform-backend-esdg.onrender.com/api/resume-analyzer/analyze",
           {
             resumeText:
               extractedText,
